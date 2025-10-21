@@ -1,0 +1,51 @@
+<!--
+***********************************************************************************************
+directory.build.props
+
+WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and have
+          created a backup copy.  Incorrect changes to this file will make it
+          impossible to load or build your projects from the command-line or the IDE.
+
+
+***********************************************************************************************
+-->
+
+<Project>
+
+    <PropertyGroup>
+        <_RepositoryBuildPropsImported>true</_RepositoryBuildPropsImported>
+        <RepositoryRootDirectory>$(MSBuildThisFileDirectory)</RepositoryRootDirectory>
+        
+        <!-- The path to the common.props file.  This is where each module should specify their default values. -->
+        <_CommonPropsFile>$(RepositoryRootDirectory)build\common.props</_CommonPropsFile>
+
+        <!-- The path to the enlistment.props file.  This is where each enlistment should specify their default values. -->
+        <_EnlistmentPropsFile>$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(RepositoryRootDirectory)..'))</_EnlistmentPropsFile>
+    </PropertyGroup>
+
+    <Import Project="$(_CommonPropsFile)" Condition="'$(_CommonPropsFileImported)' != 'true' and Exists('$(_CommonPropsFile)')" />
+    <Import Project="$(_EnlistmentPropsFile)" Condition="'$(_EnlistmentPropsFileImported)' != 'true' and Exists('$(_EnlistmentPropsFile)')" />
+    <Import Project="$(_NugetVersionFixPropsFile)" Condition="'$(ExcludeRestorePackageImports)' == 'true' and Exists('$(_NugetVersionFixPropsFile)')" />
+
+    <!-- Set Defaults -->
+    <PropertyGroup Condition="'$(_EnlistmentPropsFileImported)' != 'true'">
+        <Agent_BuildDirectory Condition="'$(Agent_BuildDirectory)' == ''">$(MSBuildThisFileDirectory)</Agent_BuildDirectory>
+        <Agent_BuildDirectory Condition="'$(Agent_BuildDirectory)' != '' and !HasTrailingSlash('$(Agent_BuildDirectory)')">$(Agent_BuildDirectory)\</Agent_BuildDirectory>
+
+        <Build_BinariesDirectory Condition="'$(Build_BinariesDirectory)' == ''">$(Agent_BuildDirectory)artifacts</Build_BinariesDirectory>
+        <Build_BinariesDirectory Condition="'$(Build_BinariesDirectory)' != '' and !HasTrailingSlash('$(Build_BinariesDirectory)')">$(Build_BinariesDirectory)\</Build_BinariesDirectory>
+
+        <!-- Set fallbacks in case the enlistment props file doesn't exist -->
+        <BaseOutputPath>$(Build_BinariesDirectory)bin\$(MSBuildProjectName)</BaseOutputPath>
+        <BaseOutputPath Condition="'$(BaseOutputPath)' != '' and !HasTrailingSlash('$(BaseOutputPath)')">$(BaseOutputPath)\</BaseOutputPath>
+
+        <BaseIntermediateOutputPath>$(Build_BinariesDirectory)obj\$(MSBuildProjectName)</BaseIntermediateOutputPath>
+        <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)' != '' and !HasTrailingSlash('$(BaseIntermediateOutputPath)')">$(BaseIntermediateOutputPath)\</BaseIntermediateOutputPath>
+
+        <PackageOutputPath Condition="'$(Build_ArtifactStagingDirectory)' == ''">$(Build_BinariesDirectory)packages\$(MSBuildProjectName)</PackageOutputPath>
+        <PackageOutputPath Condition="'$(Build_ArtifactStagingDirectory)' != ''">$(Build_ArtifactStagingDirectory)</PackageOutputPath>
+        <PackageOutputPath Condition="'$(PackageOutputPath)' != '' and !HasTrailingSlash('$(PackageOutputPath)')">$(PackageOutputPath)\</PackageOutputPath>
+
+    </PropertyGroup>
+	
+</Project>

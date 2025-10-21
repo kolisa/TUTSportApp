@@ -1,0 +1,46 @@
+<!--
+***********************************************************************************************
+Common.props
+
+WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and have
+          created a backup copy.  Incorrect changes to this file will make it
+          impossible to load or build your projects from the command-line or the IDE.
+
+
+***********************************************************************************************
+-->
+
+<Project>
+
+    <Import Project="dependencies.props" Condition="'$(_DependencyPropsFileImported)' != 'true' and Exists('dependencies.props')" />
+
+    <PropertyGroup>
+        <_CommonPropsFileImported>true</_CommonPropsFileImported>
+        <!--
+        See https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/configure-language-version#defaults
+        Using latest here will allow the use of language features that may be in higher versions than the target framework
+        which can cause intermittent failures depending on what is installed on a build agent vs a local developer machine
+        Forcing this to C# 12.0 to match .NET 8.0 usage
+        -->
+        <LangVersion>12.0</LangVersion>
+        <UseStyleCop>false</UseStyleCop>
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+        <Nullable>enable</Nullable>
+
+        <!-- Required in both test/product projects. This is a temporary workaround for https://github.com/Microsoft/vstest/issues/800 -->
+        <DebugType Condition="'$(Configuration)' == 'Debug'">Full</DebugType>
+    </PropertyGroup>
+
+    
+
+    <Target Name="ValidateModuleConfiguration" BeforeTargets="GenerateTargetFrameworkMonikerAttribute">
+        <Message Text="Validating Module Configuration" Importance="normal" />
+        <Error Text="Module Name not set. Please set the Module Name in the build\common.props file." Condition="'$(ModuleName)' == ''" />
+    </Target>
+
+    <ItemGroup>
+        <PackageReference Include="LexisNexis.Build.Sdk" PrivateAssets="All" />
+        <PackageReference Include="NerdBank.GitVersioning" PrivateAssets="All" />
+    </ItemGroup>
+</Project>
+

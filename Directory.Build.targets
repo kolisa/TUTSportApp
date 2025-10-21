@@ -1,0 +1,27 @@
+<!--
+***********************************************************************************************
+directory.build.props
+
+WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and have
+          created a backup copy.  Incorrect changes to this file will make it
+          impossible to load or build your projects from the command-line or the IDE.
+
+Copyright (C) Lexis Nexis. All rights reserved.
+***********************************************************************************************
+-->
+<Project>
+    <PropertyGroup>
+        <_RepositoryBuildTargetsImported>true</_RepositoryBuildTargetsImported>
+
+        <!-- The path to the common.props file.  This is where each module should specify their default values. -->
+        <_CommonTargetsFile>$(RepositoryRootDirectory)build\common.targets</_CommonTargetsFile>
+    </PropertyGroup>
+
+    <Import Project="$(_CommonTargetsFile)" Condition="'$(LegacyWebApp)' != 'true' and '$(_CommonTargetsFile)' != 'true' and Exists('$(_CommonTargetsFile)')" />
+
+    <!-- Remove the Manifest File from all projects. -->
+    <ItemGroup>
+        <None Remove="**/.manifest" />
+    </ItemGroup>
+
+</Project>

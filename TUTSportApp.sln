@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36603.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUTSportApp.Api", "TUTSportApp.Api\TUTSportApp.Api.csproj", "{81F1759E-F6D7-418D-A1C5-8CCBC75648CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUTSportApp.Domain", "TUTSportApp.Domain\TUTSportApp.Domain.csproj", "{BEE5616A-C90B-4338-B4AC-C40DEF47AFE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUTSportApp.Application", "TUTSportApp.Application\TUTSportApp.Application.csproj", "{1EF51047-ED9F-412C-A9A8-4478A7EE17FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUTSportApp.Infrastructure", "TUTSportApp.Infrastructure\TUTSportApp.Infrastructure.csproj", "{144BAB3E-1A0B-4022-8DEA-169128C7DDEB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		common.props = common.props
+		dependencies.props = dependencies.props
+		Directory.Build.props = Directory.Build.props
+		Directory.Build.targets = Directory.Build.targets
+		Directory.Packages.props = Directory.Packages.props
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUTSportApp.UnitTest", "TUTSportApp.UnitTest\TUTSportApp.UnitTest.csproj", "{3F8DC422-E231-40AD-ADD6-7983A8DDF5DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81F1759E-F6D7-418D-A1C5-8CCBC75648CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81F1759E-F6D7-418D-A1C5-8CCBC75648CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81F1759E-F6D7-418D-A1C5-8CCBC75648CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81F1759E-F6D7-418D-A1C5-8CCBC75648CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEE5616A-C90B-4338-B4AC-C40DEF47AFE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEE5616A-C90B-4338-B4AC-C40DEF47AFE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEE5616A-C90B-4338-B4AC-C40DEF47AFE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEE5616A-C90B-4338-B4AC-C40DEF47AFE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EF51047-ED9F-412C-A9A8-4478A7EE17FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EF51047-ED9F-412C-A9A8-4478A7EE17FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EF51047-ED9F-412C-A9A8-4478A7EE17FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EF51047-ED9F-412C-A9A8-4478A7EE17FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{144BAB3E-1A0B-4022-8DEA-169128C7DDEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{144BAB3E-1A0B-4022-8DEA-169128C7DDEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{144BAB3E-1A0B-4022-8DEA-169128C7DDEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{144BAB3E-1A0B-4022-8DEA-169128C7DDEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F8DC422-E231-40AD-ADD6-7983A8DDF5DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F8DC422-E231-40AD-ADD6-7983A8DDF5DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F8DC422-E231-40AD-ADD6-7983A8DDF5DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F8DC422-E231-40AD-ADD6-7983A8DDF5DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1ACB44E9-F017-4820-BC71-463C7743EB92}
+	EndGlobalSection
+EndGlobal
