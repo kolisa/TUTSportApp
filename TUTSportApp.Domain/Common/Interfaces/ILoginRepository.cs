@@ -1,6 +1,6 @@
 using TUTSportApp.Domain.Entities;
 
-namespace TUTSportApp.Application.Common.Interfaces
+namespace TUTSportApp.Domain.Common.Interfaces
 {
     public interface ILoginRepository : IGenericRepository<Login>
     {

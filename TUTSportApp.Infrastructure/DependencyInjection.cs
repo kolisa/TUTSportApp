@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 
-using TUTSportApp.Application.Common.Interfaces;
+using TUTSportApp.Domain.Common.Interfaces;
 using TUTSportApp.Application.Common.Models;
 using TUTSportApp.Infrastructure.Data.Context;
 using TUTSportApp.Infrastructure.Data.Repositories;

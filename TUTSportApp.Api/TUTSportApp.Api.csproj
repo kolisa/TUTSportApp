@@ -14,14 +14,12 @@
     </PackageReference>
   
     <PackageReference Include="Swashbuckle.AspNetCore" />
+  
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\TUTSportApp.Application\TUTSportApp.Application.csproj" />
     <ProjectReference Include="..\TUTSportApp.Infrastructure\TUTSportApp.Infrastructure.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
   </ItemGroup>
 </Project>

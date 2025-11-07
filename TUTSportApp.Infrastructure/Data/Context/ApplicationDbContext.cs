@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using TUTSportApp.Application.Common.Interfaces;
+using TUTSportApp.Domain.Common.Interfaces;
 using TUTSportApp.Domain.Common;
 using TUTSportApp.Domain.Entities;
 

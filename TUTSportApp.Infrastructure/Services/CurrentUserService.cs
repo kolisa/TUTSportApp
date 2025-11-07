@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
-using TUTSportApp.Application.Common.Interfaces;
+using TUTSportApp.Domain.Common.Interfaces;
 
 namespace TUTSportApp.Infrastructure.Services
 {

@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using TUTSportApp.Domain.Entities;
 
-namespace TUTSportApp.Application.Common.Interfaces
+using TUTSportApp.Domain.Entities;
+namespace TUTSportApp.Domain.Common.Interfaces
 {
     public interface IApplicationDbContext
     {

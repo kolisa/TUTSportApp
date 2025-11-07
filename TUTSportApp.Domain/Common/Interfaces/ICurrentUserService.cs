@@ -1,4 +1,4 @@
-namespace TUTSportApp.Application.Common.Interfaces
+namespace TUTSportApp.Domain.Common.Interfaces
 {
     public interface ICurrentUserService
     {

@@ -1,4 +1,4 @@
-namespace TUTSportApp.Application.Common.Exceptions
+namespace TUTSportApp.Domain.Common.Exceptions
 {
     public class NotFoundException : Exception
     {

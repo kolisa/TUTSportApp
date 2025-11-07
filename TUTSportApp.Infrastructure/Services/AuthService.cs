@@ -1,13 +1,16 @@
+using System.Buffers.Binary;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using TUTSportApp.Application.Common.Interfaces;
+
 using TUTSportApp.Application.Common.Models;
 using TUTSportApp.Application.Features.Auth.Commands;
-using System.Buffers.Binary;
+using TUTSportApp.Domain.Common.Interfaces;
+using TUTSportApp.Domain.Models;
 
 namespace TUTSportApp.Infrastructure.Services
 {
@@ -38,7 +41,7 @@ namespace TUTSportApp.Infrastructure.Services
             }
         }
 
-        public async Task<string> CreateTokenAsync(LoginCommand request)
+        public async Task<string> CreateTokenAsync(LoginModel request)
         {
            ArgumentNullException.ThrowIfNull(request);
 
