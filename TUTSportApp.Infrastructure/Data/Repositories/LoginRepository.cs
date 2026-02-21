@@ -40,7 +40,7 @@ namespace TUTSportApp.Infrastructure.Data.Repositories
         {
             var login = await Set.FindAsync(loginId).ConfigureAwait(false);
 
-            if (login != null)
+            if (login is not null)
             {
                 login.FailedAttempts = attempts;
                 login.IsLocked = attempts >= 5;

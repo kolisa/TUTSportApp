@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.0" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="FluentAssertions" Version="6.13.0" />
+    <PackageReference Include="Moq" Version="4.20.70" />
+    <PackageReference Include="coverlet.collector" Version="6.0.0" />
+    <PackageReference Include="Bogus" Version="35.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TUTSportApp.Api\TUTSportApp.Api.csproj" />
+    <ProjectReference Include="..\TUTSportApp.Application\TUTSportApp.Application.csproj" />
+    <ProjectReference Include="..\TUTSportApp.Domain\TUTSportApp.Domain.csproj" />
+    <ProjectReference Include="..\TUTSportApp.Infrastructure\TUTSportApp.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

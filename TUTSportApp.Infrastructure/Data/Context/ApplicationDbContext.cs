@@ -45,6 +45,9 @@ namespace TUTSportApp.Infrastructure.Data.Context
                         entry.Entity.LastModifiedAt = DateTime.UtcNow;
                         entry.Entity.LastModifiedBy = _currentUserService.UserId;
                         break;
+
+                    default:
+                        break;
                 }
             }
 

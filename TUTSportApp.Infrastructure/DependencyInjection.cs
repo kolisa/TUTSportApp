@@ -15,7 +15,7 @@ using TUTSportApp.Infrastructure.Services;
 namespace TUTSportApp.Infrastructure
 {
     // Renamed from 'DependencyInjection' to 'ServiceRegistration' to avoid CA1724
-    public static class ServiceRegistration
+    public static class InfrastructureServiceRegistration
     {
         public static IServiceCollection AddInfrastructure(
             this IServiceCollection services,

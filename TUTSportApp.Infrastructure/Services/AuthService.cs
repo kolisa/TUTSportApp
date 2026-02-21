@@ -1,4 +1,3 @@
-using System.Buffers.Binary;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
@@ -8,7 +7,6 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
 using TUTSportApp.Application.Common.Models;
-using TUTSportApp.Application.Features.Auth.Commands;
 using TUTSportApp.Domain.Common.Interfaces;
 using TUTSportApp.Domain.Models;
 

@@ -1,5 +1,4 @@
-using System;
-using System.Collections.Generic;
+// ...existing code...
 using TUTSportApp.Domain.Common;
 
 namespace TUTSportApp.Domain.Entities
