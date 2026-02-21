@@ -1,13 +1,11 @@
-
-
 using Microsoft.ApplicationInsights.Extensibility;
 using Serilog;
 using TUTSportApp.Application;
 using TUTSportApp.Infrastructure;
+using System.Globalization;
 
-// Bootstrap logger for startup errors
 Log.Logger = new LoggerConfiguration()
-    .WriteTo.Console()
+    .WriteTo.Console(formatProvider: CultureInfo.InvariantCulture)
     .CreateBootstrapLogger();
 
 try
@@ -63,12 +61,15 @@ try
 
     await app.RunAsync().ConfigureAwait(false);
 }
-catch (Exception ex)
-{
-    Log.Fatal(ex, "TUTSportApp API terminated unexpectedly");
-}
 finally
 {
-    await Log.CloseAndFlushAsync();
+    await Log.CloseAndFlushAsync().ConfigureAwait(false);
+}
+
+
+// This must be the last thing in the file:
+namespace TUTSportApp.Api
+{
+    public partial class Program { }
 }
 

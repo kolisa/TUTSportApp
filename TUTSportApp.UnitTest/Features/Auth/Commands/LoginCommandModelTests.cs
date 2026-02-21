@@ -7,7 +7,7 @@ namespace TUTSportApp.UnitTest.Features.Auth.Commands
     public class LoginCommandModelTests
     {
         [Fact]
-        public void Should_Set_Username_And_Password()
+        public void ShouldSetUsernameAndPassword()
         {
             var command = new LoginCommand { Username = "user1", Password = "pass1" };
             command.Username.Should().Be("user1");

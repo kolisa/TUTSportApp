@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace TUTSportApp.Application.Common.Behaviors
 {
-    public class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
+    public partial class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : notnull
     {
         private readonly ILogger<LoggingBehavior<TRequest, TResponse>> _logger;
 
@@ -16,10 +16,17 @@ namespace TUTSportApp.Application.Common.Behaviors
 
         public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
         {
-            _logger.LogInformation("Handling {RequestName} {@Request}", typeof(TRequest).Name, request);
-            var response = await next();
-            _logger.LogInformation("Handled {RequestName} {@Response}", typeof(TRequest).Name, response);
+            ArgumentNullException.ThrowIfNull(next);
+            LogHandlingRequest(_logger, typeof(TRequest).Name, request!);
+            var response = await next().ConfigureAwait(false);
+            LogHandledRequest(_logger, typeof(TRequest).Name, response!);
             return response;
         }
+
+        [LoggerMessage(EventId = 0, Level = LogLevel.Information, Message = "Handling {RequestName} {@Request}")]
+        private static partial void LogHandlingRequest(ILogger logger, string requestName, object request);
+
+        [LoggerMessage(EventId = 1, Level = LogLevel.Information, Message = "Handled {RequestName} {@Response}")]
+        private static partial void LogHandledRequest(ILogger logger, string requestName, object response);
     }
 }

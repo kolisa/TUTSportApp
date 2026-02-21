@@ -9,6 +9,7 @@ using Microsoft.IdentityModel.Tokens;
 using TUTSportApp.Application.Common.Models;
 using TUTSportApp.Domain.Common.Interfaces;
 using TUTSportApp.Domain.Models;
+using TUTSportApp.Infrastructure.Models;
 
 namespace TUTSportApp.Infrastructure.Services
 {
@@ -44,7 +45,7 @@ namespace TUTSportApp.Infrastructure.Services
            ArgumentNullException.ThrowIfNull(request);
 
             var login = await _loginRepository
-                .GetByUsernameAsync(request.Username)
+                .GetByUsernameAsync(request.Username!)
                 .ConfigureAwait(false);
 
             if (login is null)

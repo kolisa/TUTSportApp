@@ -1,0 +1,599 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Restore Solution Packages",
+			"type": "shell",
+			"command": "dotnet restore TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Clean Solution",
+			"type": "shell",
+			"command": "dotnet clean TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Application Project",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.Application/TUTSportApp.Application.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Restore API Project Packages",
+			"type": "shell",
+			"command": "dotnet restore TUTSportApp.Api/TUTSportApp.Api.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Solution",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.sln",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Restore UnitTest Project Packages",
+			"type": "shell",
+			"command": "dotnet restore TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build UnitTest Project",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Restore UnitTest Project Packages",
+			"type": "shell",
+			"command": "dotnet restore TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Restore UnitTest Project Packages",
+			"type": "shell",
+			"command": "dotnet restore TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build UnitTest Project",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build UnitTest Project",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build UnitTest Project",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build UnitTest Project",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build UnitTest Project",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build UnitTest Project",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build UnitTest Project",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build UnitTest Project",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build UnitTest Project",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build UnitTest Project",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build UnitTest Project",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build UnitTest Project with new login endpoint test",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build UnitTest Project after adding IntegrationTestWebApplicationFactory",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build UnitTest Project after adding partial Program",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build UnitTest Project after adding IWebHostBuilder using",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build UnitTest Project after fixing Program reference",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Restore UnitTest Project Packages for WebApplicationFactory",
+			"type": "shell",
+			"command": "dotnet restore TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Restore UnitTest Project Packages after adding PackageVersion",
+			"type": "shell",
+			"command": "dotnet restore TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build UnitTest Project after restoring packages",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build UnitTest Project after fixing test errors",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build UnitTest Project after adding Api reference",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build UnitTest Project after fixing using order in Program.cs",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build UnitTest Project after moving Program class to end",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Final build after removing unused property in LoginResponse",
+			"type": "shell",
+			"command": "dotnet build TUTSportApp.UnitTest/TUTSportApp.UnitTest.csproj",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		}
+	]
+}

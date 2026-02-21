@@ -8,6 +8,7 @@ using Microsoft.IdentityModel.Tokens;
 
 using TUTSportApp.Domain.Common.Interfaces;
 using TUTSportApp.Application.Common.Models;
+using TUTSportApp.Infrastructure.Models;
 using TUTSportApp.Infrastructure.Data.Context;
 using TUTSportApp.Infrastructure.Data.Repositories;
 using TUTSportApp.Infrastructure.Services;

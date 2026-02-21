@@ -3,6 +3,7 @@ using Moq;
 using TUTSportApp.Application.Features.Auth.Commands;
 using TUTSportApp.Domain.Common.Interfaces;
 using TUTSportApp.Domain.Models;
+using TUTSportApp.Domain.Entities;
 using AutoMapper;
 using Xunit;
 using System.Threading;
@@ -23,16 +24,16 @@ namespace TUTSportApp.UnitTest.Features.Auth.Commands
         }
 
         [Fact]
-        public async Task Should_Return_Failure_When_User_Not_Found()
+        public async Task ShouldReturnFailureWhenUserNotFound()
         {
-            _loginRepositoryMock.Setup(r => r.GetByUsernameAsync(It.IsAny<string>())).ReturnsAsync((Login)null);
+            _loginRepositoryMock.Setup(r => r.GetByUsernameAsync(It.IsAny<string>())).ReturnsAsync((Login?)null);
             var command = new LoginCommand { Username = "nouser", Password = "pass" };
             var result = await _handler.Handle(command, CancellationToken.None);
             result.IsSuccess.Should().BeFalse();
         }
 
         [Fact]
-        public async Task Should_Return_Failure_When_Account_Is_Locked()
+        public async Task ShouldReturnFailureWhenAccountIsLocked()
         {
             _loginRepositoryMock.Setup(r => r.GetByUsernameAsync(It.IsAny<string>())).ReturnsAsync(new Login { IsLocked = true });
             var command = new LoginCommand { Username = "user", Password = "pass" };

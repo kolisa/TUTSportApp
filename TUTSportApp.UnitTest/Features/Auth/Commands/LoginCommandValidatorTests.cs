@@ -9,70 +9,70 @@ namespace TUTSportApp.UnitTest.Features.Auth.Commands
         private readonly LoginCommandValidator _validator = new();
 
         [Fact]
-        public void Username_Empty_HasValidationError()
+        public void UsernameEmptyHasValidationError()
         {
             var result = _validator.Validate(new LoginCommand { Username = "", Password = "password123" });
             result.Errors.Should().Contain(x => x.PropertyName == "Username");
         }
 
         [Fact]
-        public void Username_Whitespace_HasValidationError()
+        public void UsernameWhitespaceHasValidationError()
         {
             var result = _validator.Validate(new LoginCommand { Username = "   ", Password = "password123" });
             result.Errors.Should().Contain(x => x.PropertyName == "Username");
         }
 
         [Fact]
-        public void Username_ExceedsMaxLength_HasValidationError()
+        public void UsernameExceedsMaxLengthHasValidationError()
         {
             var result = _validator.Validate(new LoginCommand { Username = new string('a', 51), Password = "password123" });
             result.Errors.Should().Contain(x => x.PropertyName == "Username");
         }
 
         [Fact]
-        public void Username_AtMaxLength_NoValidationError()
+        public void UsernameAtMaxLengthNoValidationError()
         {
             var result = _validator.Validate(new LoginCommand { Username = new string('a', 50), Password = "password123" });
             result.Errors.Should().NotContain(x => x.PropertyName == "Username");
         }
 
         [Fact]
-        public void Username_Valid_NoValidationError()
+        public void UsernameValidNoValidationError()
         {
             var result = _validator.Validate(new LoginCommand { Username = "validuser", Password = "password123" });
             result.IsValid.Should().BeTrue();
         }
 
         [Fact]
-        public void Password_Empty_HasValidationError()
+        public void PasswordEmptyHasValidationError()
         {
             var result = _validator.Validate(new LoginCommand { Username = "user", Password = "" });
             result.Errors.Should().Contain(x => x.PropertyName == "Password");
         }
 
         [Fact]
-        public void Password_TooShort_HasValidationError()
+        public void PasswordTooShortHasValidationError()
         {
             var result = _validator.Validate(new LoginCommand { Username = "user", Password = "123" });
             result.Errors.Should().Contain(x => x.PropertyName == "Password");
         }
 
         [Fact]
-        public void Password_AtMinLength_NoValidationError()
+        public void PasswordAtMinLengthNoValidationError()
         {
             var result = _validator.Validate(new LoginCommand { Username = "user", Password = new string('a', 6) });
             result.Errors.Should().NotContain(x => x.PropertyName == "Password");
         }
 
         [Fact]
-        public void Password_Valid_NoValidationError()
+        public void PasswordValidNoValidationError()
         {
             var result = _validator.Validate(new LoginCommand { Username = "user", Password = "password123" });
             result.IsValid.Should().BeTrue();
         }
 
         [Fact]
-        public void BothFieldsEmpty_HasTwoValidationErrors()
+        public void BothFieldsEmptyHasTwoValidationErrors()
         {
             var result = _validator.Validate(new LoginCommand { Username = "", Password = "" });
             result.Errors.Should().Contain(x => x.PropertyName == "Username");

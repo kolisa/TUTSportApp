@@ -12,7 +12,7 @@ namespace TUTSportApp.UnitTest.Behaviors
     {
         private sealed record TestRequest(string Value) : IRequest<string>;
 
-        private class TestValidator : AbstractValidator<TestRequest>
+        private sealed class TestValidator : AbstractValidator<TestRequest>
         {
             public TestValidator()
             {
@@ -21,16 +21,16 @@ namespace TUTSportApp.UnitTest.Behaviors
         }
 
         [Fact]
-        public async Task Handle_NoValidators_CallsNextDelegate()
+        public async Task HandleNoValidatorsCallsNextDelegate()
         {
-            var behavior = new ValidationBehavior<TestRequest, string>(new IValidator<TestRequest>[0]);
+            var behavior = new ValidationBehavior<TestRequest, string>(Array.Empty<IValidator<TestRequest>>());
             var called = false;
             await behavior.Handle(new TestRequest("foo"), () => { called = true; return Task.FromResult("ok"); }, CancellationToken.None);
             Assert.True(called);
         }
 
         [Fact]
-        public async Task Handle_AllValidatorsPass_CallsNextDelegate()
+        public async Task HandleAllValidatorsPassCallsNextDelegate()
         {
             var validator = new TestValidator();
             var behavior = new ValidationBehavior<TestRequest, string>(new[] { validator });
@@ -40,7 +40,7 @@ namespace TUTSportApp.UnitTest.Behaviors
         }
 
         [Fact]
-        public async Task Handle_ValidatorFails_ThrowsValidationException()
+        public async Task HandleValidatorFailsThrowsValidationException()
         {
             var validator = new TestValidator();
             var behavior = new ValidationBehavior<TestRequest, string>(new[] { validator });
@@ -49,7 +49,7 @@ namespace TUTSportApp.UnitTest.Behaviors
         }
 
         [Fact]
-        public async Task Handle_ValidatorFails_DoesNotCallNextDelegate()
+        public async Task HandleValidatorFailsDoesNotCallNextDelegate()
         {
             var validator = new TestValidator();
             var behavior = new ValidationBehavior<TestRequest, string>(new[] { validator });
